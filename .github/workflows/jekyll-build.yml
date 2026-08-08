@@ -1,13 +1,14 @@
 name: Jekyll build
 
+# Checks that the site still builds. Runs on every push to master and on pull
+# requests, so a typo in a page or in _config.yml shows up as a failed check
+# instead of a silently broken website.
 on:
-  # Run after bad-pr check
-  workflow_run:
-    workflows: ["Cleanup bad PR"]
-    branches: [main]
-    types:
-      - completed
-      
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
 permissions:
   contents: read
 
@@ -25,7 +26,10 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.2"
+          # Ruby 3.1, not newer: this template pins Jekyll 3.9 via the
+          # github-pages gem, and its Liquid version calls String#tainted?,
+          # which Ruby 3.2 removed.
+          ruby-version: "3.1"
           bundler-cache: true
 
       - name: Build site

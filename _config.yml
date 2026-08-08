@@ -19,11 +19,13 @@ title_separator          : "-"
 name                     : &name "Dr. Shafkat Islam"
 description              : &description "Academic homepage of Dr. Shafkat Islam."
 url                      : https://trust-it-lab.github.io # The base hostname & protocol for the site.
-baseurl                  : "" # Subpath of the site. Empty because the repository is named
-                              # "trust-it-lab.github.io", so the site is served from the root
-                              # of the domain. If the repo is ever renamed, this must become
-                              # "/the-new-repo-name".
-repository               : "Trust-it-lab/trust-it-lab.github.io"
+baseurl                  : "/trust-it-lab" # Subpath of the site. This MUST match the repository
+                                           # name, because the site is served from
+                                           # https://trust-it-lab.github.io/trust-it-lab/
+                                           # If the repo is renamed, change this to match.
+                                           # (Renaming the repo to "trust-it-lab.github.io"
+                                           #  would serve it from the root; then set this to "".)
+repository               : "Trust-it-lab/trust-it-lab"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
