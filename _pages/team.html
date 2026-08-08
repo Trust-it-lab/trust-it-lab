@@ -1,0 +1,26 @@
+---
+layout: archive
+title: "Team"
+permalink: /team/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% comment %}
+  This page lists everyone in the /_team/ folder as a simple bulleted list.
+  To add a member, create a new file in /_team/ - see /_team/README.md.
+  Members are shown in the order given by the "order" field, smallest first.
+{% endcomment %}
+
+{% assign members = site.team | sort: "order" %}
+
+{% if members.size == 0 %}
+  <p>No team members listed yet.</p>
+{% else %}
+  <ul>
+    {% for member in members %}
+      <li>{{ member.name }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}

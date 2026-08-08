@@ -13,7 +13,10 @@
 
     "themes",
     "theme/{{ site.site_theme | default: 'default' | append: '_light' }}",
-    "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
+    // The dark theme is deliberately NOT imported: this site is light/white only.
+    // To re-enable dark mode, restore the line below and the #theme-toggle button
+    // in /_includes/masthead.html.
+    // "theme/{{ site.site_theme | default: 'default' | append: '_dark' }}",
 
     "include/mixins",
     "vendor/susy/susy",
@@ -35,5 +38,7 @@
     "layout/page",
     "layout/archive",
     "layout/sidebar",
-    "layout/json_cv"
+    "layout/json_cv",
+
+    "layout/news"
 ;
