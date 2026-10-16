@@ -6,4 +6,5 @@ permalink: /publication/2026-flowrag-a-two-stage-retrieval-augmented-intrusion-d
 date: 2026-12-27
 venue: "IEEE International Conference on Edge Computing and Communications (IEEE EDGE 2026)"
 authors: "S Mishra, S Awasthi, B Bhargava, Z Liu, <b>S Islam</b>"
+paperurl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11662396"
 ---
