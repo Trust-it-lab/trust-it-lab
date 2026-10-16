@@ -6,4 +6,5 @@ permalink: /publication/2025-a-q-learning-novelty-search-strategy-for-evaluating
 date: 2025-12-30
 venue: "IEEE Intelligent Systems, vol. 40, no. 5, pp. 5-15"
 authors: "<b>S Islam</b>, MH Chiu, T Bonjour, R de Oliveira, B Bhargava, M Kejriwal"
+paperurl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10697140"
 ---
