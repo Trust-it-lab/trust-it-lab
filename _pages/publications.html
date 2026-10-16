@@ -8,9 +8,9 @@ author_profile: true
 {% include base_path %}
 
 {% comment %}
-  Publications are listed newest to oldest, grouped by year, in the same order
-  as Google Scholar. Each publication is one file in /_publications/.
-  Within a year, a later "date" appears first.
+  Publications are grouped by type (the order of publication_category in
+  _config.yml). Inside each group they are listed newest to oldest, in the
+  same order as Google Scholar. Each publication is one file in /_publications/.
 {% endcomment %}
 
 {% if site.author.googlescholar %}
@@ -18,21 +18,19 @@ author_profile: true
 {% endif %}
 
 {% assign pubs = site.publications | sort: "date" | reverse %}
-{% assign current_year = "" %}
 
-{% for pub in pubs %}
-  {% assign year = pub.date | date: "%Y" %}
-  {% if year != current_year %}
-    {% unless current_year == "" %}</ol>{% endunless %}
-    <h2 class="pub-year">{{ year }}</h2>
-    <ol class="pub-list">
-    {% assign current_year = year %}
+{% for category in site.publication_category %}
+  {% assign group = pubs | where: "category", category[0] %}
+  {% if group.size > 0 %}
+  <h2 class="pub-group">{{ category[1].title }}</h2>
+  <ol class="pub-list">
+    {% for pub in group %}
+    <li class="pub">
+      <p class="pub__title">{% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
+      {% if pub.authors %}<p class="pub__authors">{{ pub.authors }}</p>{% endif %}
+      <p class="pub__venue"><i>{{ pub.venue }}</i>, {{ pub.date | date: "%Y" }}{% if pub.paperurl %} &middot; <a href="{{ pub.paperurl }}">Paper</a>{% endif %}</p>
+    </li>
+    {% endfor %}
+  </ol>
   {% endif %}
-  <li class="pub">
-    <span class="pub__type">{{ site.publication_category[pub.category].title }}</span>
-    <p class="pub__title">{% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
-    {% if pub.authors %}<p class="pub__authors">{{ pub.authors }}</p>{% endif %}
-    <p class="pub__venue"><i>{{ pub.venue }}</i>, {{ year }}{% if pub.paperurl %} &middot; <a href="{{ pub.paperurl }}">Paper</a>{% endif %}</p>
-  </li>
 {% endfor %}
-{% if pubs.size > 0 %}</ol>{% endif %}
