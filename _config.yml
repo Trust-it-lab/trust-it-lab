@@ -43,7 +43,7 @@ author:
   location         : # example: "City, Country"
   employer         : # example: "Department, University"
   uri              : # URL
-  email            : # example: "name@university.edu"
+  email            : "islam59@pnw.edu" # example: "name@university.edu"
 
   # Academic websites - paste the full URL of the professor's profile on each site
   academia         : # URL
@@ -79,7 +79,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "shafkat-islam-456360ba" # Username
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
