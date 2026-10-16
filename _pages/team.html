@@ -8,19 +8,50 @@ author_profile: true
 {% include base_path %}
 
 {% comment %}
-  This page lists everyone in the /_team/ folder as a simple bulleted list.
-  To add a member, create a new file in /_team/ - see /_team/README.md.
+  The Principal Investigator card uses the details in _config.yml (author).
+  Team member cards come from the /_team/ folder - see /_team/README.md.
   Members are shown in the order given by the "order" field, smallest first.
 {% endcomment %}
 
+<h2 class="team-section">Principal Investigator</h2>
+
+<div class="team-card team-card--pi">
+  <h3 class="team-card__name">{{ site.author.name }}</h3>
+  <p class="team-card__role">Assistant Professor, Department of Computer Science, Purdue University Northwest<br>
+  Affiliated Faculty, Purdue CERIAS<br>
+  PI, Trustworthy, Robust &amp; Secure Intelligent Systems (Trust-It) Lab</p>
+  <p class="team-card__links">
+    {% if site.author.email %}<a href="mailto:{{ site.author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a>{% endif %}
+    {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> Google Scholar</a>{% endif %}
+    {% if site.author.linkedin %}<a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>{% endif %}
+    {% if site.author.github %}<a href="https://github.com/{{ site.author.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
+  </p>
+</div>
+
 {% assign members = site.team | sort: "order" %}
+
+<h2 class="team-section">Team Members</h2>
 
 {% if members.size == 0 %}
   <p>No team members listed yet.</p>
 {% else %}
-  <ul>
-    {% for member in members %}
-      <li>{{ member.name }}</li>
-    {% endfor %}
-  </ul>
+<div class="team-grid">
+  {% for member in members %}
+  <div class="team-card">
+    <h3 class="team-card__name">{{ member.name }}</h3>
+    {% if member.role %}<p class="team-card__role">{{ member.role }}</p>{% endif %}
+    {% if member.interests %}<p class="team-card__interests"><strong>Interests:</strong> {{ member.interests }}</p>{% endif %}
+    {% if member.bio %}<p class="team-card__bio">{{ member.bio }}</p>{% endif %}
+    {% if member.scholar or member.linkedin or member.github or member.website or member.email %}
+    <p class="team-card__links">
+      {% if member.email %}<a href="mailto:{{ member.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> Email</a>{% endif %}
+      {% if member.scholar %}<a href="{{ member.scholar }}"><i class="ai ai-google-scholar ai-fw" aria-hidden="true"></i> Google Scholar</a>{% endif %}
+      {% if member.linkedin %}<a href="{{ member.linkedin }}"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a>{% endif %}
+      {% if member.github %}<a href="{{ member.github }}"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a>{% endif %}
+      {% if member.website %}<a href="{{ member.website }}"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a>{% endif %}
+    </p>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
 {% endif %}

@@ -1,0 +1,54 @@
+/* ==========================================================================
+   TEAM PAGE - cards in the same style as the Research page
+   ========================================================================== */
+
+.team-section {
+    margin-top: 1.5em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25em;
+
+    @include breakpoint($medium) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.team-card {
+    padding: 1em 1.25em;
+    border: 3px solid var(--global-border-color);
+    border-radius: 20px;
+
+    p {
+        margin: 0 0 0.5em;
+        font-size: $type-size-6;
+    }
+}
+
+.team-card--pi {
+    margin-bottom: 1em;
+}
+
+.team-card__name {
+    margin: 0 0 0.25em;
+}
+
+.team-card__role {
+    font-weight: bold;
+}
+
+.team-card__interests,
+.team-card__bio {
+    color: var(--global-text-color);
+}
+
+.team-card__links {
+    margin-bottom: 0 !important;
+
+    a {
+        margin-right: 1em;
+        white-space: nowrap;
+    }
+}
