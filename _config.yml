@@ -98,13 +98,13 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   manuscripts:
-    title: 'Journal Articles'
+    title: 'Journal'
   conferences:
-    title: 'Conference Papers'
+    title: 'Conference'
   books:
-    title: 'Book Chapters'
+    title: 'Book Chapter'
   others:
-    title: 'Preprints & Datasets'
+    title: 'Preprint / Dataset'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

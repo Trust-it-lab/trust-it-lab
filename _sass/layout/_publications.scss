@@ -1,0 +1,49 @@
+/* ==========================================================================
+   PUBLICATIONS PAGE - newest to oldest, grouped by year
+   ========================================================================== */
+
+.pub-intro {
+    font-size: $type-size-6;
+}
+
+.pub-year {
+    margin-top: 1.5em;
+}
+
+.pub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pub {
+    padding: 0.75em 0;
+    border-bottom: 1px solid var(--global-border-color);
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    p {
+        margin: 0 0 0.2em;
+        font-size: $type-size-6;
+    }
+}
+
+.pub__type {
+    display: inline-block;
+    margin-bottom: 0.3em;
+    padding: 0 0.5em;
+    font-size: $type-size-7;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    color: var(--global-text-color-light);
+}
+
+.pub__title {
+    font-weight: bold;
+}
+
+.pub__venue {
+    color: var(--global-text-color-light);
+}

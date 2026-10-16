@@ -5,32 +5,34 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
+{% comment %}
+  Publications are listed newest to oldest, grouped by year, in the same order
+  as Google Scholar. Each publication is one file in /_publications/.
+  Within a year, a later "date" appears first.
+{% endcomment %}
+
+{% if site.author.googlescholar %}
+  <p class="pub-intro">For the most up-to-date list, see <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
 {% endif %}
 
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign current_year = "" %}
 
-
+{% for pub in pubs %}
+  {% assign year = pub.date | date: "%Y" %}
+  {% if year != current_year %}
+    {% unless current_year == "" %}</ol>{% endunless %}
+    <h2 class="pub-year">{{ year }}</h2>
+    <ol class="pub-list">
+    {% assign current_year = year %}
+  {% endif %}
+  <li class="pub">
+    <span class="pub__type">{{ site.publication_category[pub.category].title }}</span>
+    <p class="pub__title">{% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
+    {% if pub.authors %}<p class="pub__authors">{{ pub.authors }}</p>{% endif %}
+    <p class="pub__venue"><i>{{ pub.venue }}</i>, {{ year }}{% if pub.paperurl %} &middot; <a href="{{ pub.paperurl }}">Paper</a>{% endif %}</p>
+  </li>
+{% endfor %}
+{% if pubs.size > 0 %}</ol>{% endif %}
