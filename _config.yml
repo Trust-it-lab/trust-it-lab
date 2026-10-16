@@ -39,7 +39,7 @@ author:
                                           # and put its filename here. Square images work best.
   name             : "Dr. Shafkat Islam"
   pronouns         : # example: "she/her"
-  bio              : "Assistant Professor, Purdue University Northwest<br>Affiliated Faculty, Purdue CERIAS<br>PhD in Computer Science, Purdue University"
+  bio              : "• Assistant Professor, Purdue University Northwest<br>• Affiliated Faculty, Purdue CERIAS<br>• PhD in Computer Science, Purdue University"
   location         : # example: "City, Country"
   employer         : # example: "Department, University"
   uri              : "https://trust-it-lab.github.io/trust-it-lab/" # URL
