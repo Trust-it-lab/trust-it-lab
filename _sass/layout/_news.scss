@@ -46,3 +46,22 @@
     margin: 0 0 0.35em;
     font-size: $type-size-5;
 }
+
+/* Compact news list on the home page: "[2026/8] Text of the news item." */
+
+.news-list {
+    list-style: none;
+    margin: 0.5em 0 0;
+    padding-left: 0;
+
+    li {
+        margin-bottom: 0.4em;
+        font-size: $type-size-6;
+        line-height: 1.45;
+    }
+}
+
+.news-list__date {
+    font-weight: bold;
+    color: var(--global-link-color);
+}

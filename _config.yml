@@ -48,7 +48,7 @@ author:
   # Academic websites - paste the full URL of the professor's profile on each site
   academia         : # URL
   arxiv            : # URL
-  googlescholar    : # URL - e.g. https://scholar.google.com/citations?user=XXXXXXXX
+  googlescholar    : "https://scholar.google.com/citations?user=M5-bv_EAAAAJ" # URL - e.g. https://scholar.google.com/citations?user=XXXXXXXX
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # URL - e.g. https://orcid.org/0000-0000-0000-0000
@@ -97,12 +97,14 @@ author:
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
-  books:
-    title: 'Books'
   manuscripts:
-    title: 'Journal Articles'    
+    title: 'Journal Articles'
   conferences:
     title: 'Conference Papers'
+  books:
+    title: 'Book Chapters'
+  others:
+    title: 'Preprints & Datasets'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews

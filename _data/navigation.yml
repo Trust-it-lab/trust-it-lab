@@ -8,32 +8,30 @@
 #      Markdown formatted page while the second is generated using JSON.
 
 main:
+  - title: "Home"
+    url: /
+
   - title: "Publications"
     url: /publications/
-
-  - title: "News"
-    url: /news/
-
-  - title: "Teaching"
-    url: /teaching/
 
   - title: "Team"
     url: /team/
 
-  - title: "Talks"
-    url: /talks/
+  - title: "Research"
+    url: /research/
 
-  - title: "Portfolio"
-    url: /portfolio/
-        
-  - title: "Blog Posts"
-    url: /year-archive/
-    
-  - title: "CV"
-    url: /cv/
-    
+  - title: "Teaching"
+    url: /teaching/
+
+  # Pages below still exist on the site but are hidden from the menu.
+  # Uncomment any of them to show it again.
+  # - title: "News"
+  #   url: /news/
+  # - title: "Talks"
+  #   url: /talks/
+  # - title: "Portfolio"
+  #   url: /portfolio/
+  # - title: "Blog Posts"
+  #   url: /year-archive/
   # - title: "CV"
-  #   url: /cv-json/
-    
-  - title: "Guide"
-    url: /markdown/
+  #   url: /cv/
