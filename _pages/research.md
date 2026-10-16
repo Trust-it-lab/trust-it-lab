@@ -14,6 +14,8 @@ author_profile: true
   and caption.
 {% endcomment %}
 
+The Trust-It lab develops trustworthy, robust, and secure AI agents and safeguards critical infrastructures and systems when AI agents are integrated into traditional systems. The lab builds efficient, robust, and secure systems for applications such as autonomous systems, disaster management, industrial IoT, healthcare, and space platforms.
+
 <div class="research-card" markdown="1">
 
 ## Agentic AI for Microgrid Data Integrity

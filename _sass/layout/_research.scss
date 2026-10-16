@@ -44,3 +44,17 @@
 .research-card__papers {
     margin-bottom: 0;
 }
+
+/* Teaching page: topic tags inside the Teaching Focus card */
+
+.teaching-areas {
+    text-align: center;
+
+    span {
+        display: inline-block;
+        margin: 0.25em;
+        padding: 0.2em 0.75em;
+        border: 1px solid var(--global-border-color);
+        border-radius: 999px;
+    }
+}

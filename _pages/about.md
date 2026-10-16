@@ -15,6 +15,21 @@ Shafkat is a tenure-track assistant professor and the PI of the **Trustworthy, R
 
 His research outcomes have been published in high-impact venues such as IEEE Intelligent Systems, IEEE Transactions on Artificial Intelligence, IEEE Internet of Things Journal, IEEE Transactions on Industrial Informatics, IEEE Network, IEEE WoWMoM, IEEE LCN, IEEE ISGT NA, etc. He has led the preparation of multiple grant proposals for leading funding agencies. He was awarded the **Purdue Employee Merit Recognition Award** in 2024 and recognized as an **excellent reviewer by the IEEE Communications Society** in 2023.
 
+He is also a member of the **QIRL lab**.
+
+Education
+======
+
+- Ph.D. in Computer Science, Purdue University, West Lafayette
+- M.S. in Computer Science & Engineering, University of Nevada, Reno
+- M.S. in Informatics, Northern Arizona University
+- B.S. in Electrical & Electronic Engineering, Chittagong University of Engineering & Technology
+
+Areas of Expertise
+======
+
+Agentic AI · AI Security · Cybersecurity · Data Privacy · Quantum Intelligence
+
 News
 ======
 

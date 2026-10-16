@@ -7,6 +7,27 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.teaching reversed %}
+{% comment %}
+  To list a course, add a file to /_teaching/ (for example
+  2026-fall-cs-database-systems.md) with title, type, venue and date.
+  The "Courses" section appears automatically once a course file exists.
+{% endcomment %}
+
+<div class="research-card">
+  <h2>Teaching Focus</h2>
+  <p>Dr. Islam's teaching focuses on database management, AI security, generative AI applications, and big data systems, with an emphasis on problem-solving and on designing secure, scalable, data-driven solutions for real-world applications. Across these areas, students develop skills in computational thinking, system design, responsible AI use, and data analysis, and learn to evaluate the opportunities and risks of emerging technologies.</p>
+  <p class="teaching-areas">
+    <span>Database Management</span>
+    <span>AI Security</span>
+    <span>Generative AI Applications</span>
+    <span>Big Data Systems</span>
+  </p>
+</div>
+
+{% assign courses = site.teaching | sort: "date" | reverse %}
+{% if courses.size > 0 %}
+<h2>Courses</h2>
+{% for post in courses %}
   {% include archive-single.html %}
 {% endfor %}
+{% endif %}
