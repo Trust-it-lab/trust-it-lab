@@ -42,7 +42,7 @@ author:
   bio              : "Assistant Professor, Purdue University Northwest<br>Affiliated Faculty, Purdue CERIAS<br>PhD in Computer Science, Purdue University"
   location         : # example: "City, Country"
   employer         : # example: "Department, University"
-  uri              : # URL
+  uri              : "https://trust-it-lab.github.io/trust-it-lab/" # URL
   email            : "islam59@pnw.edu" # example: "name@university.edu"
 
   # Academic websites - paste the full URL of the professor's profile on each site
