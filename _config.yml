@@ -48,7 +48,7 @@ author:
   # Academic websites - paste the full URL of the professor's profile on each site
   academia         : # URL
   arxiv            : # URL
-  googlescholar    : "https://scholar.google.com/citations?user=M5-bv_EAAAAJ" # URL - e.g. https://scholar.google.com/citations?user=XXXXXXXX
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=M5-bv_EAAAAJ&view_op=list_works&sortby=pubdate" # URL - e.g. https://scholar.google.com/citations?user=XXXXXXXX
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : # URL - e.g. https://orcid.org/0000-0000-0000-0000
@@ -64,7 +64,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : # Username
+  github           : "iShafkat" # Username
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
