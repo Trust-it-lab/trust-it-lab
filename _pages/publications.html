@@ -28,7 +28,9 @@ author_profile: true
     <li class="pub">
       <p class="pub__title">{% if pub.paperurl %}<a href="{{ pub.paperurl }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</p>
       {% if pub.authors %}<p class="pub__authors">{{ pub.authors }}</p>{% endif %}
-      <p class="pub__venue"><i>{{ pub.venue }}</i>, {{ pub.date | date: "%Y" }}{% if pub.paperurl %} &middot; <a href="{{ pub.paperurl }}">Paper</a>{% endif %}</p>
+      {% if pub.venue or pub.paperurl or pub.undated != true %}
+      <p class="pub__venue">{% if pub.venue %}<i>{{ pub.venue }}</i>{% endif %}{% unless pub.undated %}{% if pub.venue %}, {% endif %}{{ pub.date | date: "%Y" }}{% endunless %}{% if pub.paperurl %} &middot; <a href="{{ pub.paperurl }}">Paper</a>{% endif %}</p>
+      {% endif %}
     </li>
     {% endfor %}
   </ol>

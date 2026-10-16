@@ -103,8 +103,10 @@ publication_category:
     title: 'Conference Papers'
   books:
     title: 'Book Chapters'
+  abstracts:
+    title: 'Symposium Abstracts'
   others:
-    title: 'Preprints & Datasets'
+    title: 'Preprints, Datasets & Other Works'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/ for social media previews
